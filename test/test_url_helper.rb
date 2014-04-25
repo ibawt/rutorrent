@@ -1,7 +1,7 @@
 require 'rutorrent'
-require 'test/unit'
+require 'minitest/autorun'
 
-class TestURLHelper < Test::Unit::TestCase
+class TestURLHelper < MiniTest::Test
   def path_for(args)
     args[:token] = 'TOKEN' if Hash === args
     RUTorrent::Helpers::URLHelper::path_for(args)
